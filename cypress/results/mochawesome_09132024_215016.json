@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-08-19T17:20:15.267Z",
-    "end": "2024-08-19T17:20:19.252Z",
-    "duration": 3985,
-    "testsRegistered": 1,
+    "start": "2024-09-14T00:50:12.384Z",
+    "end": "2024-09-14T00:50:16.325Z",
+    "duration": 3941,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0a563147-dc52-4f9c-8c51-fa65888994e8",
+      "uuid": "710f97b9-d2e5-48bc-93bb-267ed45937c2",
       "title": "",
       "fullFile": "cypress\\e2e\\login-correto.cy.js",
       "file": "cypress\\e2e\\login-correto.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "18b4506f-e606-4259-ac35-bf8717e3a786",
+          "uuid": "8fb7438d-7223-4e43-88e1-c8402ab72c80",
           "title": "Página de login",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,48 @@
               "title": "Deve preencher os campos do login corretamente e autenticar o usuário na página",
               "fullTitle": "Página de login Deve preencher os campos do login corretamente e autenticar o usuário na página",
               "timedOut": null,
-              "duration": 2527,
+              "duration": 2202,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.login('icarosantiago52@gmail.com', 'Senha123');",
+              "code": "cy.get('.header__message').click();\ncy.login('icarosantiago52@gmail.com', 'Senha123');",
               "err": {},
-              "uuid": "726de95b-a2cf-4624-8376-4ea092479cd5",
-              "parentUUID": "18b4506f-e606-4259-ac35-bf8717e3a786",
+              "uuid": "8c276594-1939-4d34-8de1-78ef1822543d",
+              "parentUUID": "8fb7438d-7223-4e43-88e1-c8402ab72c80",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica imagens dos animais",
+              "fullTitle": "Página de login Verifica imagens dos animais",
+              "timedOut": null,
+              "duration": 471,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://adopet-frontend-cypress.vercel.app/home');\ncy.get('.cards').should('be.visible');",
+              "err": {},
+              "uuid": "f9bcc2fd-eac0-433c-9d74-62023f08e251",
+              "parentUUID": "8fb7438d-7223-4e43-88e1-c8402ab72c80",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "726de95b-a2cf-4624-8376-4ea092479cd5"
+            "8c276594-1939-4d34-8de1-78ef1822543d",
+            "f9bcc2fd-eac0-433c-9d74-62023f08e251"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2527,
+          "duration": 2673,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
